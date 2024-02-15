@@ -1,27 +1,27 @@
-
-
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>leaflet-elevation.js</title>
+	<title>Dieng Caldera Race 2024 42K Category</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<link rel="dns-prefetch" href="https://tile.openstreetmap.org">
 	<link rel="dns-prefetch preconnect" href="https://unpkg.com" />
 	<link rel="preload" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" as="script">
 	<link rel="preload" href="https://unpkg.com/leaflet-ui@0.6.0/dist/leaflet-ui.js" as="script">
-	
-	<style>@import "css/fullpage.css";</style>
+
+	<style>@import 'css/fullpage.css';</style>
 
 	<!-- leaflet-ui -->
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 	<script src="https://unpkg.com/leaflet-ui@0.6.0/dist/leaflet-ui.js"></script>
 
-	<!-- leaflet-elevation -->
-	<link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@2.5.0/dist/leaflet-elevation.min.css" />
-	<script src="https://unpkg.com/@raruto/leaflet-elevation@2.5.0/dist/leaflet-elevation.min.js"></script>
+	<!-- leaflet-gpx -->
+	<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
 
+	<!-- leaflet-elevation -->
+	<link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.css" />
+	<script src="https://unpkg.com/@raruto/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.js"></script>
 </head>
 
 <body>
@@ -31,19 +31,24 @@
 	<script>
 		let opts = {
 			map: {
-				center: [2.5853814539864293, 98.83596730001078],
-				zoom: 12,
-				fullscreenControl: false,
-				resizerControl: true,
+				center: [-7.269106967646161, 109.96534826015626],
+				zoom: 10,
+				fullscreenControl: true,
+				layersControl: true,
+				minimapControl: false,
+				searchControl: false,
+				locateControl: false,
+				pegmanControl: false,
+				resizerControl: false,
+				gestureHandling: false,
 				preferCanvas: true,
-				rotate: true,
-				// bearing: 45,
-				rotateControl: {
-					closeOnZeroBearing: true
+				rotate: false,
+				zoomControl: {
+					position: 'topleft',
 				},
 			},
 			elevationControl: {
-				url: "https://assajjadazis.github.io/tracks/100K%20Samosirr%20(2).gpx",
+				url: "https://assajjadazis.github.io/tracks/42KM_TAMBI.gpx",
 				options: {
 					theme: "lightblue-theme",
 					collapsed: false,
@@ -128,8 +133,7 @@
 
 	</script>
 
-	<a href="https://github.com/Raruto/leaflet-elevation" class="view-on-github" style="position: fixed;top: 30px;left: calc(50% - 81px);z-index: 9999;"> <img alt="View on Github" src="https://raruto.github.io/img/view-on-github.png" title="View on Github" width="163"> </a>
-
+	
 </body>
 
 </html>
